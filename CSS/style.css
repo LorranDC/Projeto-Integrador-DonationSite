@@ -11,6 +11,8 @@
     --cor-principal: #EB4DC1;
     --cor-secundaria-transparente: #ee96d6ce;
     --cor-contraste: #2B9E15;
+    --cor-texto: #fff;
+    --cor-fundo: #F65345;
 }
 
 
@@ -167,4 +169,65 @@ input[type="checkbox"] {
     background-color: var(--cor-secundaria-transparente);
     
     
+}
+
+.ajuda {
+    background-image: url('../img/FundoPaginaAjuda.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    color: #fff;
+    position: relative;
+    top: 10px;
+    height: 85vh;
+    align-content: center;
+    width: 100%;
+    
+}
+
+.ajuda section {
+    border-radius: 10px;
+    font-size: larger;
+    width: 80%;
+    top: 35%;
+    margin: auto;
+    position: relative;
+    background-color: var(--cor-secundaria-transparente);
+}
+
+.ajuda button {
+    position: relative;
+    top: 45%;
+    color: var(--cor-texto);
+    background-color: var(--cor-principal);
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 4px 2px;
+    text-decoration: none;
+    font-size: 2em;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    font-weight: 600;
+    
+    
+}
+
+.ajuda button:hover {
+    background-color: #fff;
+    color: var(--cor-principal);
+}
+
+footer {
+    color: var(--cor-texto);
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    height: 2.5rem;
+    background-color: var(--cor-principal);
 }
