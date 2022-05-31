@@ -223,6 +223,51 @@ input[type="checkbox"] {
     color: var(--cor-principal);
 }
 
+.formInscricao input[type=text], select {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.formInscricao input[type=submit] {
+    width: 70%;
+    background-color: #000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.formInscricao input[type=submit]:hover {
+    width: 70%;
+    background-color: white;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formInscricao {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    position: fixed;
+    z-index: 2;
+    margin-left: 10%;
+    top: 100%;
+}
+
+
 footer {
     color: var(--cor-texto);
     position: relative;

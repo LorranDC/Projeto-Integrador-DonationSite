@@ -45,8 +45,28 @@
                         <h2>Ajude!</h2>
                         <p id="texto2">Para se inscrever, basta clicar no botão abaixo</p>
                     </section>
-                    <button class="btn" type="submit">Inscrever-se</button>
-                </div>
+                    <button class="btn" onclick="showForm()">Inscrever-se</button>
+                    </div>
+                    <div class="formInscricao">
+                        <form id="formElement" style="display: none;">
+                            <label for="Primeiro Nome"></label>
+                            <input type="text" id="fname" name="firstname" placeholder="Seu nome...">
+
+                            <label for="lname">Sobrenome</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Seu sobrenome...">
+
+                            <label for="city">Cidade</label>
+                            <select id="city" name="city">
+                                <option value="varginha">Varginha</option>
+                                <option value="pousoalegre">Pouso Alegre</option>
+                                <option value="saobentoabade">São Bento Abade</option>
+                                <option value="trescoracoes">Três Corações</option>
+                            </select>
+
+                            <input type="submit" value=""Submit>
+                        </form>
+                    </div>
+                
                 <footer>
                     <div class="rodape">
                         <section>
