@@ -125,7 +125,7 @@ input[type="checkbox"] {
     nav ul li a.active,
     nav ul li a:hover {
         background: none;
-        color: var(--cor-contraste);
+        color: #000;
     }
 }
 
