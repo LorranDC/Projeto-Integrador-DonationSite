@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8"/>
+   <title>Cadastro</title>
+   <link rel="stylesheet" href="CSS/style.css" />
+   <link rel="shortcut icon" href="img/Imagem.jpg" />
+<style>
+body {
+    border-top: 50px solid #EB4DC1;
+    margin: 0;
+   text-align: center;
+
+                background-color: #f5dfec;
+            
+}
+
+h1, h2, h3, h4 {
+        font-weight: inherit;
+        color: #EB4DC1;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid #ddd;
+    }
+
+    #corpo {
+        margin: 50px 150px;
+
+    }
+
+    #formulario{
+        text-align: left;
+        margin:auto;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        max-width: 600px;
+
+    }
+
+    #formulario .flex_direita {
+        display: flex;
+        float: right;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    #formulario .flex_esquerda {
+     display: flex;
+     flex-direction: column;
+     flex: 1;
+    }
+
+    #formulario label {
+        line-height: 30px;
+        text-align:left;
+        color:#EB4DC1;
+    }
+
+    #formulario input {
+        padding: 9px;
+        border: 1px solid #CCCCCC;
+        background: #E8EFE4;
+        border-radius: 4px;
+        color:#6b666a;
+    }
+
+    #formulario select {
+        padding: 9px;
+        border: 1px solid #CCCCCC;
+        background: #E8EFE4;
+        border-radius: 4px;
+        color:#EB4DC1;
+    }
+
+    #formulario .botao {
+        cursor: pointer;
+        text-align: left;
+        margin: 0 0 0 0;
+        color: #FFF;
+        background-color: #EB4DC1;
+    }
+
+    #formulario .botao:hover {
+        background-color: #EB4DC1;
+    }
+
+    #copy {
+        color: #EB4DC1;
+        text-align: center;
+        margin: 50px 150px;
+    }      
+    p{
+        color: #EB4DC1; 
+    }
+    </style>
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                Acha Aqui
+                </div>   
+        </nav>
+       
+        <p> ATENÇÃO !!!</p>
+     <p> Por favor preencha os campos corretamente para sua segurança, a maioria dos dados serão restritos os únicos publicos serão (Nome, telefone, legenda e a foto ).</p>
+     <p>Todos os arquivos serão analisados e qualquer fcoto/legenda fora do esperado irá ser removida e bloqueada.</p>
+     <p>Todos os campos com a seguinte marca (*) são de preenchimento obrigatório.</p>
+     <p>Qualquer erro ou dúvida é só ligar/mensagem no número (35) 998323171.</p>
+     <p>Na hora de entrar um contato para receber a doação para sua segurança nunca ir sozinho(a) e sempre marcar em um local público !!</p>
+     
+     <!-- /Corpo -->
+    <div id="corpo">
+       <!-- Formulário -->
+       <div id="formulario">
+    <form action="principal.html" method="post">
+      <div class="flex_direita">
+      
+             <div class="cpf direita" id="">
+                <label for="cpf">CPF: *</label><br>
+                <input type="text" size="25" placeholder="000.000.000-0" required>
+             </div>
+             <div class="rg direita" id="">
+                <label for="rg">RG: *</label><br>
+                <input type="text" placeholder="00.000.000-0">
+             </div>
+
+            <div class="celular direita" id="">
+                <label for="celular">Ceular: *</label><br>
+                <input type="text" size="25" placeholder="(00) 0000-0000" required>
+             </div> 
+     </div>
+
+     <div class="flex_esquerda">
+             <div class="esquerda" id="">
+                <label for="nome">Nome Completo: *</label><br>
+                <input type="text" size="35" placeholder="Nome Completo" required>
+             </div>
+             <div class="data esquerda" id="">
+                <label for="data_de_nascimento">Data de Nascimento: *</label><br>
+                <input type="text" size="25" placeholder="__/__/____" required>
+             </div>
+
+            
+
+             <div class="esquerda" id="">
+                <label for="email">E-mail: *</label><br>
+                <input type="text" size="35" placeholder="exemplo@email.com" required>
+             </div>
+             <div class="cidade" id="">
+                <label for="cidade">Cidade: *</label><br>
+             <select id="city" name="city" required>
+                <option value="varginha">Varginha</option>
+                <option value="pousoalegre">Pouso Alegre</option>
+                <option value="saobentoabade">São Bento Abade</option>
+                <option value="trescoracoes">Três Corações</option>
+            </select>
+        </div>
+
+        <div class="esquerda" id="">
+            <label for="legenda">Digite a legenda da publicação por favor: *</label><br>
+            <input type="text" size="35" placeholder="Legenda" required>
+         </div>
+        <div class="esquerda" id="">
+            <label for="arquivo">Selecione sua imagem: *</label><br>
+            <input name="myFile" type="file" required>
+         </div>
+     </div>
+             <br>
+             <input type="submit" value="Voltar"   class="botao" href="principal.html">
+             <input type="reset" value="Limpar Campos" class="botao">
+             <input type="submit" value="Cadastrar" class="botao">
+    </form>
+   </div>
+       <!-- /Formulário -->
+</div>
+    <!-- /Corpo -->
+    </body>
+    </html>
