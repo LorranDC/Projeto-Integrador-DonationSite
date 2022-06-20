@@ -7,129 +7,64 @@
         <title>Acha Aqui</title>
         <!-- CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-        <link rel="stylesheet" href="CSS/style.css" />
+        <link rel="stylesheet" href="CSS/stylePrincipal.css">
         <link rel="shortcut icon" href="img/Imagem.jpg" />
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <!--JavaScript-->
-        <script src="/JS/script.js"></script>  
-        <style>
-            body {
-                background-color: #f5dfec;
-            }
-           
-            nav ul li a.active,
-            nav ul li a:hover {
-                color: #f2f2f2;
-                background: #EB4DC1;
-            }
-            nav ul li a.ajudar,
-            nav ul li a:hover {
-                color: #f2f2f2;
-                background: #EB4DC1;
-               
-            }
-            nav ul li a.feed,
-            nav ul li a:hover {
-                color: #EB4DC1;
-                background: #f2f2f2;
-               
-            }
-            footer {
-                position: absolute;
-            	bottom: 0;
-                text-align: center;
-            }    
-            .ajudabtn {
-                color: white;
-                background-color: #EB4DC1;
-                border-top: 30%;
-                padding: 5px 15px;
-                text-align: center;
-                cursor: pointer;
-                border-radius: 10px;
-                text-decoration: none;
-                font-size: 1.8em;
-                transition-duration: 0.4s;
-                overflow: hidden;
-                font-weight: 600;
-                position: relative;
-                left: 42%;
- 
-     
-
-               
-
-            }  
-            .listarCidade{
-                color: white;
-            }
-            section {
-                text-align: center; 
-                color: white;
-                border-radius: 10px;
-                font-size: larger;
-                margin-top:50px;
-                margin-left:50px;
-                margin-right:50px;
-                position: relative;
-                background-color: #ee96d6ce;
-                font-size: 1.5em;
-            }
-            h1{
-                color:#EB4DC1;
-                font-size: 4em;
-                text-align: center;
-            }
-            
-            </style>     
+        <script src="https://kit.fontawesome.com/29bf185c8a.js" crossorigin="anonymous"></script> 
     </head>
-        <body>
+        <body onload="imprimirCidade()">
             <nav>
                 <div class="logo">
                     Acha Aqui
                     </div>   
-                    <input type="checkbox" id="click">
                     <label for="click" class="menu-btn">
-                    <i class="fas fa-bars"></i>
+                        <i class="fas fa-bars"></i>
                     </label>
-                    <div class="listarCidade" id="">
+                    <div class="listarCidade" id="newCity">
                         <label for="listarCidade">Cidade:</label>
-                        <input type="text" >
+                        
                      </div>
                     <ul>
                         <li><a  class="active" href="index.html">Home</a></li>
                         <li><a class= "feed" href="principal.html">Página de Doações</a></li>
-                        <li><a class="ajudar" href="Ajuda.html">Ajuda</a></li>
-                                                  
+                        <li><a class="ajudar" href="Ajuda.html">Ajuda</a></li>                              
                     </ul>
             </nav>
-            <div class="ajuda">
-                <section>
-                    <p id="texto2">Para doar basta clicar no botão Inscrever-se:
-
-                    </p>
-                </section>
-               <br> <br/>
-
-                <a href="formulario.html" class="ajudabtn">Inscrever-se</a>
-              
-                </div>
-                
-               
-                <section>
-                    <p id="texto2">Atenção !!! </p>
-                    <p id="texto2">Na hora de entrar um contato para receber a doação para sua segurança nunca ir sozinho(a) e sempre marcar em um local público !! </p>
-                </section>
-                <h1>Feed</h1>
+            <div>
+                <div class="ajuda">
+                    <section>
+                        <p id="texto2">Para doar basta clicar no botão Inscrever-se:</p>
+                    </section>
+                <br> <br/>
+                    <a href="formulario.html" class="ajudabtn">Inscrever-se</a>
+                    </div>
+                    <section>
+                        <p id="texto2">Atenção !!! </p>
+                        <p id="texto2">Na hora de entrar um contato para receber a doação para sua segurança nunca ir sozinho(a) e sempre marcar em um local público !! </p>
+                    </section>
+                    <h1>Feed</h1>
+                        <div class="feedDiv">
+                            <div class="postBox">
+                                <form>
+                                    <div class="postTitle"></div>
+                                    <div class="postDescription">
+                                        <textarea placeholder="Escreva uma legenda para a sua publicação..."></textarea>
+                                        <label for="fileUpload"><i class="fa-solid fa-photo-film"></i></label>
+                                            <input type="file" id="fileUpload">
+                                    </div>
+                                    <div class="postSubmit"></div>
+                                </form>
+                            </div>
+                        </div>
+            </div>    
             <footer>
                 <div class="rodape">
-                 
                         <p>&copy Graziele  Lorran  Marcus  Paulo  Rafael  Tamires </p>
-                
                 </div>
-            </footer> 
+            </footer>
+            <script src="/JS/script.js"></script> 
         </body>
 </html>

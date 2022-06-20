@@ -14,55 +14,28 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <!--JavaScript-->
-        <script src="/JS/script.js"></script>  
-
-        <style>
-          #city{
-              background: #f5dfec;
-              width: 70%;
-              padding: 12px 20px;
-              width: 70%;
-              padding: 12px 20px;
-              margin: 8px 0;
-            }
-            
-            
-            </style>    
-              
     </head>
         <body>
             <nav>
                 <div class="logo">
                     Acha Aqui
                     </div>   
-                    <input type="checkbox" id="click">
-                    <label for="click" class="menu-btn">
-                    <i class="fas fa-bars"></i>
-                    </label>
-                    <ul>
-                        <li><a  class="active" href="index.html">Home</a></li>
-                       
-                       
-                    </ul>
             </nav>
             <main class="content"> 
                 <div class="principal">
                     <section> 
                         <h2>Acha Aqui</h2>
-                        <p id="texto1">Somos uma Rede Social onde ajuda na divulgação de itens a ser doados.</p>
-                        <p id="texto1"> Para começarmos basta selecionar a cidade a qual deseja doar/ver os itens a ser doados, e em seguida clique no botão !</p>
-                        <select id="city" name="city">
-                            <option value="varginha">Varginha</option>
+                        <p id="texto1">Somos uma Rede Social que visa a ajuda na divulgação de itens a serem doados.</p>
+                        <p id="texto1"> Para começarmos, basta selecionar a cidade para qual deseja doar/ver os itens a serem doados, e em seguida clique no botão "Começar" !</p>
+                        <select id="city-choice" name="city" onchange="selecionarCidade()">
+                            <option value="varginha" selected>Varginha</option>
                             <option value="pousoalegre">Pouso Alegre</option>
                             <option value="saobentoabade">São Bento Abade</option>
                             <option value="trescoracoes">Três Corações</option>
                         </select>
-                        <a href="principal.html" class="btn">Começar</a>
-                    </section>
-                    
+                        <button class="btn" type="submit" onclick="imprimirCidade()"><a href="principal.html" class="btn">Começar</a></button>
+                    </section>                
                 </div>
-               
-                
                 <footer>
                     <div class="rodape">
                         <section>
@@ -71,6 +44,6 @@
                     </div>
                 </footer> 
             </main>
-                   
+            <script src="/JS/script.js"></script>          
         </body>
 </html>

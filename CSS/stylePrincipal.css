@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Variáveis */
+:root {
+    --cor-principal: #EB4DC1;
+    --cor-secundaria-transparente: #ee96d6ce;
+    --cor-contraste: #2B9E15;
+    --cor-texto: #fff;
+    --cor-fundo: #F65345;
+}
+
+
+/* Barra de Navegação Responsiva */
+
+nav {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: var(--cor-principal);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+    
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: var(--cor-principal);
+    background: #fff;
+}
+
+nav .menu-btn i {
+    
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+.ajudabtn {
+    color: white;
+    background-color: #EB4DC1;
+    border-top: 30%;
+    padding: 5px 15px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.8em;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    font-weight: 600;
+    position: relative;
+    left: 42%;  
+}  
+
+.listarCidade {
+    color: white;
+}
+
+section {
+    text-align: center; 
+    color: white;
+    border-radius: 10px;
+    font-size: larger;
+    margin-top:50px;
+    margin-left:50px;
+    margin-right:50px;
+    position: relative;
+    background-color: #ee96d6ce;
+    font-size: 1.5em;
+}
+
+h1{
+    color:#EB4DC1;
+    font-size: 4em;
+    text-align: center;
+}
+
+/*Formulário Postagem*/
+.feedDiv {
+    background-color: black;
+    width: 100%;
+    height: 300vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.postBox {
+    background-color: #fff;
+    width: 50%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    padding: 10px;
+}
+
+.postBox form {
+    width: 100%;
+    height: 100%;
+}
+
+.postTitle {
+    background-color: blue;
+    height: 15%;
+    width: 100%;
+}
+
+.postDescription {
+    background-color: red;
+    height: 70%;
+    width: 100%;
+}
+
+.postDescription textarea {
+    width: 100%;
+    height: 20%;
+    resize: none;
+    border-radius: 5px;
+}
+
+.postDescription input {
+    display: none;
+}
+
+.postDescription i {
+    cursor: pointer;
+}
+
+.postDescription i:hover {
+    opacity: 0.6;
+}
+
+.postSubmit {
+    background-color: green;
+    height: 15%;
+    width: 100%;
+}

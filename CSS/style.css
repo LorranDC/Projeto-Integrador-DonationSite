@@ -103,6 +103,7 @@ input[type="checkbox"] {
 
     #click:checked ~ ul {
         left: 0;
+        position: absolute;
     }
 
     nav ul li {
@@ -125,7 +126,7 @@ input[type="checkbox"] {
     nav ul li a.active,
     nav ul li a:hover {
         background: none;
-        color: #000;
+        color: #fff;
     }
 }
 
@@ -179,7 +180,15 @@ input[type="checkbox"] {
     padding: 10px;
     border-radius: 5px;
     transition: 0.5s;
+}
 
+#city-choice{
+    background: #f5dfec;
+    width: 70%;
+    padding: 12px 20px;
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
 }
 
 footer {
