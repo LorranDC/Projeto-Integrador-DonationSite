@@ -51,9 +51,18 @@
                                 <form>
                                     <div class="postTitle"></div>
                                     <div class="postDescription">
+                                        <div class="text-area">
                                         <textarea placeholder="Escreva uma legenda para a sua publicação..."></textarea>
-                                        <label for="fileUpload"><i class="fa-solid fa-photo-film"></i></label>
+                                        </div>
+                                        <div class="img-input">
+                                        <label for="fileUpload"><i class="fa-solid fa-photo-film fa-xl" ></i>Selecionar Imagem ou Vídeo</label>
                                             <input type="file" id="fileUpload">
+                                        </div>
+                                        <div class="image-preview" id="imagePreview">
+                                            <img src="" alt="Image Preview" class="image-preview__image">
+                                            <span class="image-preview__default-text">Image Preview</span>
+                                        </div>
+
                                     </div>
                                     <div class="postSubmit"></div>
                                 </form>
