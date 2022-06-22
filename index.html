@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <!--JavaScript-->
     </head>
-        <body>
+        <body onload="selecionarCidade()">
             <nav>
                 <div class="logo">
                     Acha Aqui
@@ -27,13 +27,15 @@
                         <h2>Acha Aqui</h2>
                         <p id="texto1">Somos uma Rede Social que visa a ajuda na divulgação de itens a serem doados.</p>
                         <p id="texto1"> Para começarmos, basta selecionar a cidade para qual deseja doar/ver os itens a serem doados, e em seguida clique no botão "Começar" !</p>
+                        <div class="select-submit">
                         <select id="city-choice" name="city" onchange="selecionarCidade()">
                             <option value="varginha" selected>Varginha</option>
                             <option value="pousoalegre">Pouso Alegre</option>
                             <option value="saobentoabade">São Bento Abade</option>
                             <option value="trescoracoes">Três Corações</option>
                         </select>
-                        <button class="btn" type="submit" onclick="imprimirCidade()"><a href="principal.html" class="btn">Começar</a></button>
+                            <a type="submit" onclick="imprimirCidade()" href="principal.html" class="btn">Começar</a>
+                        </div>
                     </section>                
                 </div>
                 <footer>

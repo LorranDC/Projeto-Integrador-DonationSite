@@ -39,7 +39,7 @@
                         <p id="texto2">Para doar basta clicar no botão Inscrever-se:</p>
                     </section>
                 <br> <br/>
-                    <a href="formulario.html" class="ajudabtn">Inscrever-se</a>
+                    <a href="formulario.html" class="inscreverBtn">Inscrever-se</a>
                     </div>
                     <section>
                         <p id="texto2">Atenção !!! </p>
@@ -49,14 +49,34 @@
                         <div class="feedDiv">
                             <div class="postBox">
                                 <form>
-                                    <div class="postTitle"></div>
-                                    <div class="postDescription">
-                                        <textarea placeholder="Escreva uma legenda para a sua publicação..."></textarea>
-                                        <label for="fileUpload"><i class="fa-solid fa-photo-film"></i></label>
-                                            <input type="file" id="fileUpload">
+                                    <div class="postTitle">
+                                        <label for="userIcon"><i class="fa-solid fa-user-large fa-2xl" id="userIcon"></i>Usuário</label>
+                                        
+
                                     </div>
-                                    <div class="postSubmit"></div>
+                                    <div class="postDescription">
+                                        <div class="text-area">
+                                        <textarea placeholder="Escreva uma legenda para a sua publicação..."></textarea>
+                                        </div>
+                                        <div class="img-input">
+                                        <label for="fileUpload"><i class="fa-solid fa-photo-film fa-xl" ></i>Selecionar Imagem ou Vídeo</label>
+                                            <input type="file" id="fileUpload" name="fileUpload" onchange="getImagePreview(event)">
+                                        </div>
+                                        <div class="image-preview" id="imagePreview">                            
+                                            <span class="image-preview__default-text">Imagem/Video Selecionado</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="postSubmit">
+                                        <button type="submit" onsubmit="fazerPostagem()"> Postar</button>
+                                    </div>
                                 </form>
+                            </div>
+                            <div class="postsDiv">
+
+
+
+
                             </div>
                         </div>
             </div>    

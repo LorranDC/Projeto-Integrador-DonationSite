@@ -1,4 +1,15 @@
 
+function getImagePreview(event) {
+    var image = URL.createObjectURL(event.target.files[0]);
+    var imagediv = document.getElementById('imagePreview');
+    var newimg  = document.createElement('img');
+    imagediv.innerHTML ="";
+    newimg.src = image;
+    newimg.width = "400";
+    newimg.height = "250";
+    imagediv.appendChild(newimg);
+}
+
 function selecionarCidade() {
 const select = document.querySelector('#city-choice');
 
@@ -12,9 +23,6 @@ localStorage.texto = text
 
 return text;
 }
-
-
-
 
 function imprimirCidade() {
 
