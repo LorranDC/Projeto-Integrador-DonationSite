@@ -47,32 +47,46 @@
                     </section>
                     <h1>Feed</h1>
                         <div class="feedDiv">
-                            <div class="postBox">
-                                <form>
+                            <div class="postBox" id="postBox">
+                                <form id="postForm" >
                                     <div class="postTitle">
-                                        <label for="userIcon"><i class="fa-solid fa-user-large fa-2xl" id="userIcon"></i>Usuário</label>
-                                        
-
+                                        <label for="userIcon"><i class="fa-solid fa-user-large fa-2xl" id="userIcon"></i>Usuário</label>    
                                     </div>
                                     <div class="postDescription">
                                         <div class="text-area">
-                                        <textarea placeholder="Escreva uma legenda para a sua publicação..."></textarea>
+                                        <textarea placeholder="Escreva uma legenda para a sua publicação..." name="legend" id="legend"></textarea>
                                         </div>
                                         <div class="img-input">
                                         <label for="fileUpload"><i class="fa-solid fa-photo-film fa-xl" ></i>Selecionar Imagem ou Vídeo</label>
-                                            <input type="file" id="fileUpload" name="fileUpload" onchange="getImagePreview(event)">
+                                            <input type="file" id="fileUpload" name="fileUpload" onchange="lerInputFile(event)">
                                         </div>
-                                        <div class="image-preview" id="imagePreview">                            
-                                            <span class="image-preview__default-text">Imagem/Video Selecionado</span>
+                                        <div class="file-preview" id="filePreview">                            
+                                            <span id="file-preview__default-text" display="block">Imagem/Video Selecionado</span>
+                                            <video autoplay id="videoPreview" class="videoPreview" controls>
+                                                <source id="source" class="source" type="video/mp4">
+                                            </video>
                                         </div>
 
                                     </div>
                                     <div class="postSubmit">
-                                        <button type="submit" onsubmit="fazerPostagem()"> Postar</button>
+                                        <button type="submit" onclick="postPub()" id="btnPost"> Postar</button>
                                     </div>
                                 </form>
                             </div>
-                            <div class="postsDiv">
+                            <ul class="postsUl" id="postsUl">
+                                <li class="post" id="post">                       
+                                            <div class="postModelTitle">
+                                                <label for="userIcon"><i class="fa-solid fa-user-large fa-2xl" id="userIcon"></i>Usuário</label>
+                                                <button type="submit">Entrar em contato</button>    
+                                            </div>
+                                            <div>
+                                                <p>AQUI ESTARÁ A LEGENDA DA PUBLICAÇÃO</p>
+                                            </div>  
+                                            <div>
+                                                <p>AQUI ESTARÁ O ARQUIVO POSTADO</p>
+                                            </div>                                    
+                                </li>
+                            </ul>
 
 
 
@@ -85,6 +99,6 @@
                         <p>&copy Graziele  Lorran  Marcus  Paulo  Rafael  Tamires </p>
                 </div>
             </footer>
-            <script src="/JS/script.js"></script> 
+            <script src="/JS/script.js"></script>
         </body>
 </html>
