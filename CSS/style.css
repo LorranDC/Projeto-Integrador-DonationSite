@@ -186,9 +186,15 @@ input[type="checkbox"] {
     background: #f5dfec;
     width: 70%;
     padding: 12px 20px;
-    width: 70%;
+    width: 75%;
     padding: 12px 20px;
     margin: 8px 0;
+}
+
+.select-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 footer {
