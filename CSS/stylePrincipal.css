@@ -11,12 +11,18 @@
     --cor-principal: #EB4DC1;
     --cor-secundaria-transparente: #ee96d6ce;
     --cor-contraste: #2B9E15;
-    --cor-texto: #fff;
+    --cor-texto: rgb(248, 245, 245);
     --cor-fundo: #F65345;
     --cor-fundo-post: #2C9E9E;
     --cor-titulo-post: #36EBEB;
+    --cor-fundo-tela: #fddcf4;
+    --cor-postBox: #4292EB;
+    --cor-sombra: rgba(12, 12, 12, 0.301);
 }
 
+body {
+    background-color: var(--cor-fundo-tela);
+}
 
 /* Barra de Navegação Responsiva */
 
@@ -72,23 +78,65 @@ nav .menu-btn i {
     display: none;
 }
 
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 5vh;
+    height: min-content;
+    
+}
 
+.primeiroBloco {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    row-gap: 5vh;
+    height: max-content;
+}
+
+.ajuda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    row-gap: 5vh;
+    height: 30vh;
+
+}
+
+.ajuda section {
+    color: var(--cor-texto);
+    top: 5vh;
+    width: 100%;
+    box-shadow: 5px 5px 10px var(--cor-sombra);
+    text-align: center; 
+    border-radius: 10px;
+    font-size: larger;
+    background-color: #ee96d6ce;
+    font-size: 1.5em;
+}
 
 .inscreverBtn {
+    display: flex;
     color: white;
     background-color: #EB4DC1;
-    border-top: 30%;
-    padding: 5px 15px;
     text-align: center;
-    cursor: pointer;
-    border-radius: 10px;
     text-decoration: none;
-    font-size: 1.8em;
-    transition-duration: 0.5s;
-    overflow: hidden;
-    font-weight: 600;
-    position: relative;
-    left: 42%;  
+    width: 30%;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: xx-large;
+    transition: 0.5s;
+    box-shadow: 3px 3px 10px var(--cor-sombra);    
+
 }  
 
 .inscreverBtn:hover {
@@ -101,20 +149,17 @@ nav .menu-btn i {
     color: white;
 }
 
-section {
+.aviso section {
     text-align: center; 
     color: white;
     border-radius: 10px;
     font-size: larger;
-    margin-top:50px;
-    margin-left:50px;
-    margin-right:50px;
-    position: relative;
     background-color: #ee96d6ce;
     font-size: 1.5em;
+    box-shadow: 3px 5px 10px var(--cor-sombra);
 }
 
-h1{
+h1 {
     color:#EB4DC1;
     font-size: 4em;
     text-align: center;
@@ -122,24 +167,27 @@ h1{
 
 /*Formulário Postagem*/
 .feedDiv {
-    background-color: black;
+    background-color: none;
     width: 100%;
-    
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 5vh;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .postBox {
     display: flex;
-    background-color: #fff;
+    background-color: var(--cor-postBox);
     width: 50%;
-    height: 90vh;
+    height: 100vh;
     position: relative;
     margin-top: 5%;
     padding: 10px;
+    border-radius: 10px;
+    align-items: flex-start;
+    box-shadow: 0px 3px  10px 10px var(--cor-sombra);
     
 }
 
@@ -147,12 +195,15 @@ h1{
     width: 100%;
     height: 100%;
     display: flex; 
-    flex-direction: column; 
+    flex-direction: column;
+    
+     
+    
 }
 
 .postTitle {
-    background-color: blue;
-    height: 15%;
+    background-color: none;
+    height: 10%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -173,19 +224,23 @@ h1{
 }
 
 .postDescription {
-    background-color: red;
-    height: 75%;
+    background-color: var(--cor-fundo-tela);
+    height: 80%;
     width: 100%;
     padding: 1%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 10px;
+    
 }
 
 .text-area {
+    display: flex;
     width: 100%;
-    height: 20%;
-    
+    height: 10%;
+    align-items: flex-start;
+    padding: 1%;
     
 }
 
@@ -194,11 +249,55 @@ h1{
     height: 100%;
     resize: none;
     border-radius: 5px;
+    padding: 1%;
+    font-size: 100%;
+    overflow: hidden;
+    border: 3px solid var(--cor-postBox);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    outline: none;
+    height: 6vh;
+}
+
+.text-area textarea:focus {
+    border: 3px solid var(--cor-fundo-post);
+}
+
+.contato-input {
+    width: 100%;
+    height: 30%;
+    padding: 1%;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.contato-input textarea {
+    height: 25%;
+    resize: none;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 1%;
+    font-size: 100%;
+    overflow: hidden;
+    border: 3px solid var(--cor-postBox);
+    outline: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+}
+
+.contato-input textarea:focus {
+    border: 3px solid var(--cor-fundo-post);
 }
 
 .img-input {
+    display: flex;
     height: 10%;
     padding: 1%;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .img-input label {
@@ -211,6 +310,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .img-input input {
@@ -228,7 +328,7 @@ h1{
 }
 
 .postSubmit {
-    background-color: green;
+    background-color: none;
     height: 10%;
     width: 100%;
     padding: 1%;
@@ -237,15 +337,17 @@ h1{
 
 .file-preview {
     width: 100%;
-    min-height: 70%;
-    border: 2px solid #dddddd;
-    
-
+    min-height: 50%;
+    border: 2px solid gray;  
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    color: #cccccc;
+    color: gray;
+    position: relative;
+    bottom: 0;
+    top: 0;
+    border-radius: 5px;
 }
 
 .file-preview img {
@@ -341,3 +443,4 @@ h1{
     width: 100%;
     display: none;
 }
+

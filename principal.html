@@ -33,19 +33,22 @@
                         <li><a class="ajudar" href="Ajuda.html">Ajuda</a></li>                              
                     </ul>
             </nav>
-            <div>
+            <div class="mainContent">
+                <div class="primeiroBloco">
                 <div class="ajuda">
                     <section>
                         <p id="texto2">Para doar basta clicar no botão Inscrever-se:</p>
-                    </section>
-                <br> <br/>
+                    </section class="aviso">
                     <a href="formulario.html" class="inscreverBtn">Inscrever-se</a>
                     </div>
+                    <div class="aviso">
                     <section>
                         <p id="texto2">Atenção !!! </p>
                         <p id="texto2">Na hora de entrar um contato para receber a doação para sua segurança nunca ir sozinho(a) e sempre marcar em um local público !! </p>
                     </section>
+                    </div>
                     <h1>Feed</h1>
+                    </div>
                         <div class="feedDiv">
                             <div class="postBox" id="postBox">
                                 <form id="postForm" >
@@ -55,6 +58,12 @@
                                     <div class="postDescription">
                                         <div class="text-area">
                                         <textarea placeholder="Escreva uma legenda para a sua publicação..." name="legend" id="legend"></textarea>
+                                        </div>
+                                        <div class="contato-input"> 
+                                            <label for="postBoxNome">Nome:</label><br>
+                                            <textarea placeholder="Digite seu nome" id="postBoxNome" name="postBoxNome"></textarea><br>
+                                            <label for="postBoxContato">Número para contato:</label><br>
+                                            <textarea placeholder="Digite seu melhor número" id="postBoxContato" name="postBoxContato"></textarea><br>
                                         </div>
                                         <div class="img-input">
                                         <label for="fileUpload"><i class="fa-solid fa-photo-film fa-xl" ></i>Selecionar Imagem ou Vídeo</label>
@@ -77,7 +86,7 @@
                                 <li class="post" id="post">                       
                                             <div class="postModelTitle">
                                                 <label for="userIcon"><i class="fa-solid fa-user-large fa-2xl" id="userIcon"></i>Usuário</label>
-                                                <button type="submit">Entrar em contato</button>    
+                                
                                             </div>
                                             <div>
                                                 <p>AQUI ESTARÁ A LEGENDA DA PUBLICAÇÃO</p>

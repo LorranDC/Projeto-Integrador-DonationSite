@@ -75,7 +75,8 @@ function postPub() {
     const formulario = document.querySelector('#postForm');
     formulario.addEventListener('submit', event => event.preventDefault())
     var legenda = document.getElementById('legend').value;
-    
+    var nome = document.querySelector('#postBoxNome').value;
+    var numContato = document.querySelector('#postBoxContato').value;
     
     function filtroUpload() {
     
@@ -132,11 +133,13 @@ function postPub() {
 
     <li class="post" id="post">                       
         <div class="postModelTitle">
-         <label for="userIcon"><i class="fa-solid fa-user-large fa-2xl" id="userIcon"></i>Usuário</label>
-        <button type="submit">Entrar em contato</button>    
+            <label for="userIcon"><i class="fa-solid fa-user-large fa-2xl" id="userIcon"></i>${nome}</label>
+            <div>
+                <label for="postContato">Número para Contato:</label><br>
+                <p id="postContato" name="postContato">${numContato}</p>
+            </div>
         </div>
         <div>
-            <p>AQUI ESTARÁ A LEGENDA DA PUBLICAÇÃO</p>
             <p> ${legenda}</p>
         </div>  
         <div class="file-post" id="filePost">
@@ -156,11 +159,27 @@ function limparCamposPostBox() {
     const videoSource = document.querySelector("#source");
     const videoPreview = document.querySelector("#videoPreview");
     const fileInput = document.querySelector("#fileUpload");
+    const imgPreview = document.querySelector("#imgPreview");
+    const inputNome = document.querySelector("#postBoxNome");
+    const inputNum = document.querySelector("#postBoxContato");
+    const inputLegenda = document.querySelector("#legend");
 
-    videoPreview.pause();
-    videoSource.removeAttribute('src');
-    videoPreview.load();
-    videoPreview.style.display="none";
+    if(typeof(videoPreview) != 'undefined' && videoPreview != null) {
+        videoPreview.pause();
+        videoSource.removeAttribute('src');
+        videoPreview.load();
+        videoPreview.style.display="none";
+    }
+
+    if(typeof(imgPreview) != 'undefined' && imgPreview != null) {
+        imgPreview.remove();
+    }
+
+
+    inputNum.value = '';
+    inputNome.value = '';
     fileInput.value = '';
+    inputLegenda.value = '';
     spamElement.style.display = "block";
+    
 }
