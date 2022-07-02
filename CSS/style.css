@@ -13,6 +13,7 @@
     --cor-contraste: #2B9E15;
     --cor-texto: #fff;
     --cor-fundo: #F65345;
+    --cor-sombra: rgba(12, 12, 12, 0.301);
 }
 
 
@@ -27,7 +28,7 @@ nav {
     justify-content: space-between;
     padding: 0 50px 0 100px;
     flex-wrap: wrap;
-    
+    box-shadow: 0 5px 5px var(--cor-sombra);
 }
 
 nav .logo {
@@ -70,81 +71,22 @@ nav .menu-btn i {
     display: none;
 }
 
-input[type="checkbox"] {
-    display: none;
-}
-
-@media (max-width: 1000px) {
-    nav {
-        padding: 0 40px 0 50px;
-    }
-}
-
-@media (max-width: 920px) {
-    nav .menu-btn i {
-        display: block;
-    }
-
-    #click:checked ~ .menu-btn i:before {
-        content: "\f00d";
-    }
-    
-    nav ul {
-        position: fixed;
-        top: 80px;
-        left: -100%;
-        background: var(--cor-principal);
-        height: 100vh;
-        width: 100%;
-        text-align: center;
-        display: block;
-        transition: all 0.3s ease;
-    }
-
-    #click:checked ~ ul {
-        left: 0;
-        position: absolute;
-    }
-
-    nav ul li {
-        width: 100%;
-        margin: 40px 0;
-    }
-
-    nav ul li a {
-        width: 100%;
-        margin-left: -100%;
-        display: block;
-        font-size: 20px;
-        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
-
-    #click:checked ~ ul li a {
-        margin-left: 0px;
-    }
-
-    nav ul li a.active,
-    nav ul li a:hover {
-        background: none;
-        color: #fff;
-    }
-}
 
 /* Responsividade de Conteúdo */
 
 .content {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: -1;
     width: 100%;
-    padding: 0;
-    height: 85vh;    
+    height: 88vh;    
 }
 
 .principal { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-image: url('../img/FundoPrincipal.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -154,55 +96,95 @@ input[type="checkbox"] {
     -webkit-background-size:cover;
     color:#fff;   
     position: relative;
-    top: 10px;
     height: 85vh;
     align-content: center;
     width: 100%;
 }
 
 .principal section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    text-align: center;
     border-radius: 10px;
     font-size: larger;
     width: 80%;
-    top: 35%;
+    height: 12em;
     margin: auto;
     position: relative;
     background-color: var(--cor-secundaria-transparente);
-    
+    box-shadow: 0px 0px 5px 5px var(--cor-sombra);
     
 }
 .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-principal);
+    height: 100%;
     width: 20%;
-    text-align: center;
+    border-radius: 5px;
+}
+
+.btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    background-color: #EB4DC1;
-    color: white;
-    padding: 10px;
+    color: var(--cor-texto);
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
     border-radius: 5px;
     transition: 0.5s;
 }
 
+.btn a:hover {
+    background-color: var(--cor-texto);
+    color: var(--cor-principal);
+    transition: 0.5s;
+
+}
+
 #city-choice{
     background: #f5dfec;
-    width: 70%;
-    padding: 12px 20px;
     width: 75%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    height: 100%; 
+    outline: none;
+    border-radius: 5px;
+    transition: 0.5s;
+    padding: 1%;
+    font-size: large;
+    font-weight: normal;
+    border: none;
+}
+
+.city-choice option{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
 }
 
 .select-submit {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    height: 30%;
+    padding: 0.5%;
 }
 
 footer {
-    
+    display: flex;
     color: var(--cor-texto);
     position: relative;
     width: 100%;
-    bottom: 0;
     height: 2.5rem;
     background-color: var(--cor-principal);
+    font-size: larger;
+    font-weight: normal;
+    align-items: center;
+    justify-content: center;
 }       

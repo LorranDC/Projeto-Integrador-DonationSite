@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+
+
+:root {
+    --cor-principal: #EB4DC1;
+    --cor-secundaria-transparente: #ee96d6ce;
+    --cor-contraste: #2B9E15;
+    --cor-texto: #fff;
+    --cor-fundo: #F65345;
+    --cor-sombra: rgba(12, 12, 12, 0.301);
+    --cor-fundo-tela: #fddcf4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color:var(--cor-fundo-tela);
+    width: 100%;
+    position: absolute;
+}
+
+nav {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: var(--cor-principal);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+    box-shadow: 0 5px 5px var(--cor-sombra);
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: var(--cor-principal);
+    background: #fff;
+}
+
+nav .menu-btn i {
+    
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+main {
+    height: 82vh;
+}
+
+section {
+    text-align: center; 
+    color: white;
+    border-radius: 10px;
+    font-size: larger;
+    margin-top:50px;
+    margin-left:50px;
+    margin-right:50px;
+    position: relative;
+    background-color: #ee96d6ce;
+    box-shadow: 0px 0px 5px 5px var(--cor-sombra);
+}
+
+footer {
+    display: flex;
+    color: var(--cor-texto);
+    position: relative;
+    width: 100%;
+    height: 2.5rem;
+    background-color: var(--cor-principal);
+    font-size: larger;
+    font-weight: normal;
+    align-items: center;
+    justify-content: center;
+}         

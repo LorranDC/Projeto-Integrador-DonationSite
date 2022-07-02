@@ -1,6 +1,50 @@
 var spamElement = document.getElementById("file-preview__default-text");
 
+function mask(o, f) {
+    setTimeout(function() {
+      var v = mphone(o.value);
+      if (v != o.value) {
+        o.value = v;
+      }
+    }, 1);
+}
+  
+  function mphone(v) {
+    var r = v.replace(/\D/g, "");
+    r = r.replace(/^0/, "");
+    if (r.length > 10) {
+      r = r.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
+    } else if (r.length > 5) {
+      r = r.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+    } else if (r.length > 2) {
+      r = r.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
+    } else {
+      r = r.replace(/^(\d*)/, "($1");
+    }
+    return r;
+}
+
+
+
+    function validaInputs() {
+    const formulario = document.querySelector('#postForm');
+    formulario.addEventListener('submit', event => event.preventDefault())
+
+    var inputLegenda = document.getElementById('legend').value;
+    var inputNome =   document.getElementById('postBoxNome').value;
+    var inputNum = document.getElementById('postBoxContato').value;
+    var inputArquivo = document.getElementById('fileUpload').value;
+
+    if(inputArquivo !== '' && inputLegenda !== '' && inputNome !== '' && inputNum !== '') {
+        postPub();
+    }
+    else {
+    return null;
+    } 
+}
+
 function lerInputFile() {
+   
     var fileInput = document.getElementById("fileUpload");
     var filePatch = fileInput.value;
     var filtro = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
@@ -42,8 +86,6 @@ function getImagePreview (event) {
     spamElement.style.display="none";
     imagediv.innerHTML ;
     newimg.src = image;
-    newimg.width = "400";
-    newimg.height = "250";
     newimg.setAttribute('id', 'imgPreview')
     imagediv.appendChild(newimg);
 }
@@ -72,8 +114,7 @@ element.appendChild(tag);
 }
 
 function postPub() {
-    const formulario = document.querySelector('#postForm');
-    formulario.addEventListener('submit', event => event.preventDefault())
+    
     var legenda = document.getElementById('legend').value;
     var nome = document.querySelector('#postBoxNome').value;
     var numContato = document.querySelector('#postBoxContato').value;
@@ -128,18 +169,18 @@ function postPub() {
     }
 
 
-    var postList = document.getElementById('post');    
+    var postList = document.getElementById('postModel');    
     var post = `
 
     <li class="post" id="post">                       
-        <div class="postModelTitle">
+        <div class="postTitle">
             <label for="userIcon"><i class="fa-solid fa-user-large fa-2xl" id="userIcon"></i>${nome}</label>
-            <div>
-                <label for="postContato">Número para Contato:</label><br>
+            <div class="divContato">
+                <label for="postContato">Número para Contato:</label>
                 <p id="postContato" name="postContato">${numContato}</p>
             </div>
         </div>
-        <div>
+        <div class="postLegenda">
             <p> ${legenda}</p>
         </div>  
         <div class="file-post" id="filePost">

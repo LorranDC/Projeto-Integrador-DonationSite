@@ -9,6 +9,10 @@
 /* Variáveis */
 :root {
     --cor-principal: #EB4DC1;
+    --cor-secundaria: #C03BD4;
+    --cor-terciaria: #AF45F6;
+    --cor-quaternaria: #6B2358;
+    --cor-quinternaria: #6B4361;
     --cor-secundaria-transparente: #ee96d6ce;
     --cor-contraste: #2B9E15;
     --cor-texto: rgb(248, 245, 245);
@@ -28,30 +32,33 @@ body {
 
 nav {
     display: flex;
-    height: 80px;
+    height: 12vh;
     width: 100%;
     background: var(--cor-principal);
     align-items: center;
     justify-content: space-between;
-    padding: 0 50px 0 100px;
+    padding: 0 1%;
     flex-wrap: wrap;
-    
 }
 
 nav .logo {
     color: #fff;
     font-size: 35px;
     font-weight: 600;
+    margin-left: 10vh;
+    left: 0;
 }
 
 nav ul {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    margin-right: 0%;
+    right: 0;
 }
 
 nav ul li {
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
 nav ul li a {
@@ -71,11 +78,33 @@ nav ul li a:hover {
     background: #fff;
 }
 
-nav .menu-btn i {
-    
-    font-size: 22px;
-    cursor: pointer;
-    display: none;
+
+nav .listarCidade {
+    display: flex;
+    width: 25%;
+    margin-left: 17%;
+    flex-direction: row;
+    background-color: var(--cor-texto);
+    padding: 1%;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1vh;
+}
+
+
+
+nav .listarCidade label {
+    color: var(--cor-principal);
+    font-size: larger;
+    font-weight: bold;
+}
+
+nav .listarCidade p {
+    font-size: larger;
+    font-weight: bold;
+    color: var(--cor-principal);
+    margin-right: 7%;
 }
 
 .mainContent {
@@ -161,7 +190,7 @@ nav .menu-btn i {
 
 h1 {
     color:#EB4DC1;
-    font-size: 4em;
+    font-size: 7em;
     text-align: center;
 }
 
@@ -179,7 +208,7 @@ h1 {
 
 .postBox {
     display: flex;
-    background-color: var(--cor-postBox);
+    background-color: var(--cor-terciaria);
     width: 50%;
     height: 100vh;
     position: relative;
@@ -252,7 +281,7 @@ h1 {
     padding: 1%;
     font-size: 100%;
     overflow: hidden;
-    border: 3px solid var(--cor-postBox);
+    border: 3px solid var(--cor-terciaria);
     transition: 0.5s;
     -webkit-transition: 0.5s;
     outline: none;
@@ -260,7 +289,7 @@ h1 {
 }
 
 .text-area textarea:focus {
-    border: 3px solid var(--cor-fundo-post);
+    border: 3px solid var(--cor-quaternaria);
 }
 
 .contato-input {
@@ -273,13 +302,14 @@ h1 {
 
 .contato-input textarea {
     height: 25%;
+    width: 50%;
     resize: none;
     text-decoration: none;
     border-radius: 5px;
     padding: 1%;
     font-size: 100%;
     overflow: hidden;
-    border: 3px solid var(--cor-postBox);
+    border: 3px solid var(--cor-terciaria);
     outline: none;
     -webkit-transition: 0.5s;
     transition: 0.5s;
@@ -289,7 +319,7 @@ h1 {
 }
 
 .contato-input textarea:focus {
-    border: 3px solid var(--cor-fundo-post);
+    border: 3px solid var(--cor-quaternaria);
 }
 
 .img-input {
@@ -327,13 +357,7 @@ h1 {
     opacity: 0.6;
 }
 
-.postSubmit {
-    background-color: none;
-    height: 10%;
-    width: 100%;
-    padding: 1%;
 
-}
 
 .file-preview {
     width: 100%;
@@ -348,13 +372,17 @@ h1 {
     bottom: 0;
     top: 0;
     border-radius: 5px;
+    padding: 1%;
 }
 
 .file-preview img {
-    flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%;
+   height: 100%;
+   width: 100%;
+   width: min-content;
+   image-rendering: optimizeSpeed;
 }
+
+
 
 .file-preview video {
     display: none;
@@ -374,6 +402,12 @@ h1 {
 .postSubmit {
     display: flex;
     justify-content: center;
+    background-color: none;
+    height: 10%;
+    width: 100%;
+    padding: 1%;
+
+    
 }
 
 .postSubmit button {
@@ -390,8 +424,9 @@ h1 {
 }
 
 .postSubmit button:hover {
-    background-color: var(--cor-fundo);
+    background-color: var(--cor-texto);
     transition: 0.5s;
+    color: var(--cor-principal);
 }
 
 /*Modelo de Caixa de Postagem*/
@@ -405,24 +440,91 @@ h1 {
     align-items: center;
     gap: 20px;
     padding: 20px;
-    
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0 0 5px 5px var(--cor-sombra);
 }
 
-.post {
-    background-color: var(--cor-fundo-post);
+.postModel {
+    background-color: var(--cor-terciaria);
     width: 60%;
     list-style: none;
+    border-radius: 10px;
     
 }
 
 .postModelTitle {
     display: flex;
-    background-color: var(--cor-titulo-post);
+    background-color: var(--cor-principal);
     height: 10vh;
     align-items: center;
     justify-content: space-between;
-    padding: 2%;
+    padding: 1%;
+    
 }
+
+/* Publicação */
+
+.post {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    border-radius: 10px;
+    list-style: none;
+    border-radius: 10px;
+    width: 60%;
+    height: min-content;
+    padding: 1%;
+    background-color: var(--cor-terciaria);
+    box-shadow: 0px 10px 10px var(--cor-sombra);
+}
+
+.postTitle {
+    display: flex;
+    padding: 1%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.divContato {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.divContato p {
+    background-color: var(--cor-fundo-tela);
+    border: 3px solid var(--cor-secundaria-transparente);
+    border-radius: 5px;
+    padding: 1%;
+
+}
+
+.postLegenda {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-fundo-tela);
+    padding: 1px;
+    border: 3px solid var(--cor-secundaria-transparente);
+    border-radius: 5px;
+    width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.postLegenda p {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 1%;
+    margin-left: 0;
+    
+}
+
+
 
 .file-post  {
     justify-content: center;
@@ -430,12 +532,19 @@ h1 {
     width: 100%;
     background-position: center;
     background-size: cover;
+    padding: 1px;
+    border-radius: 5px;
+    border: 3px solid var(--cor-secundaria-transparente);
+    background-color: var(--cor-fundo-tela);
 
 }
 
 .imagePost {
     width: 100%;
-    max-height: 80vh;
+    max-height: 100%;
+    height: 100%;
+    padding: 1%;
+    border-radius: 5px;
 }
 
 
@@ -443,4 +552,18 @@ h1 {
     width: 100%;
     display: none;
 }
+
+footer {
+    display: flex;
+    color: var(--cor-texto);
+    position: relative;
+    width: 100%;
+    height: 2.5rem;
+    background-color: var(--cor-principal);
+    font-size: larger;
+    font-weight: normal;
+    align-items: center;
+    justify-content: center;
+}     
+
 

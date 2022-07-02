@@ -20,16 +20,14 @@
                 <div class="logo">
                     Acha Aqui
                     </div>   
-                    <label for="click" class="menu-btn">
-                        <i class="fas fa-bars"></i>
-                    </label>
                     <div class="listarCidade" id="newCity">
-                        <label for="listarCidade">Cidade:</label>
-                        
+                        <div>
+                            <label for="listarCidade">Cidade:</label>
+                        </div>
                      </div>
                     <ul>
-                        <li><a  class="active" href="index.html">Home</a></li>
-                        <li><a class= "feed" href="principal.html">Página de Doações</a></li>
+                        <li><a class="active" class= "feed" href="principal.html">Página de Doações</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a class="ajudar" href="Ajuda.html">Ajuda</a></li>                              
                     </ul>
             </nav>
@@ -39,7 +37,6 @@
                     <section>
                         <p id="texto2">Para doar basta clicar no botão Inscrever-se:</p>
                     </section class="aviso">
-                    <a href="formulario.html" class="inscreverBtn">Inscrever-se</a>
                     </div>
                     <div class="aviso">
                     <section>
@@ -51,23 +48,23 @@
                     </div>
                         <div class="feedDiv">
                             <div class="postBox" id="postBox">
-                                <form id="postForm" >
+                                <form id="postForm">
                                     <div class="postTitle">
                                         <label for="userIcon"><i class="fa-solid fa-user-large fa-2xl" id="userIcon"></i>Usuário</label>    
                                     </div>
                                     <div class="postDescription">
                                         <div class="text-area">
-                                        <textarea placeholder="Escreva uma legenda para a sua publicação..." name="legend" id="legend"></textarea>
+                                        <textarea placeholder="Escreva uma legenda para a sua publicação..." name="legend" id="legend" required></textarea>
                                         </div>
                                         <div class="contato-input"> 
                                             <label for="postBoxNome">Nome:</label><br>
-                                            <textarea placeholder="Digite seu nome" id="postBoxNome" name="postBoxNome"></textarea><br>
+                                            <textarea placeholder="Digite seu nome" id="postBoxNome" name="postBoxNome" required></textarea><br>
                                             <label for="postBoxContato">Número para contato:</label><br>
-                                            <textarea placeholder="Digite seu melhor número" id="postBoxContato" name="postBoxContato"></textarea><br>
+                                            <textarea placeholder="Digite seu melhor número" id="postBoxContato" name="postBoxContato" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" required></textarea><br>
                                         </div>
                                         <div class="img-input">
                                         <label for="fileUpload"><i class="fa-solid fa-photo-film fa-xl" ></i>Selecionar Imagem ou Vídeo</label>
-                                            <input type="file" id="fileUpload" name="fileUpload" onchange="lerInputFile(event)">
+                                            <input type="file" id="fileUpload" name="fileUpload" onchange="lerInputFile(event)" required>
                                         </div>
                                         <div class="file-preview" id="filePreview">                            
                                             <span id="file-preview__default-text" display="block">Imagem/Video Selecionado</span>
@@ -78,12 +75,12 @@
 
                                     </div>
                                     <div class="postSubmit">
-                                        <button type="submit" onclick="postPub()" id="btnPost"> Postar</button>
+                                        <button type="submit" onclick="validaInputs()" id="btnPost"> Postar</button>
                                     </div>
                                 </form>
                             </div>
                             <ul class="postsUl" id="postsUl">
-                                <li class="post" id="post">                       
+                                <li class="postModel" id="postModel">                       
                                             <div class="postModelTitle">
                                                 <label for="userIcon"><i class="fa-solid fa-user-large fa-2xl" id="userIcon"></i>Usuário</label>
                                 
@@ -96,18 +93,16 @@
                                             </div>                                    
                                 </li>
                             </ul>
-
-
-
-
                             </div>
                         </div>
-            </div>    
-            <footer>
-                <div class="rodape">
-                        <p>&copy Graziele  Lorran  Marcus  Paulo  Rafael  Tamires </p>
-                </div>
-            </footer>
+            </div> 
+                <footer>
+                    <div class="rodape">
+                        <section>
+                            <p>&copy &bull; Graziele  &bull; Lorran  &bull; Marcus  &bull; Paulo  &bull; Rafael  &bull; Tamires</p>
+                        </section>
+                    </div>
+                </footer> 
             <script src="/JS/script.js"></script>
         </body>
 </html>
